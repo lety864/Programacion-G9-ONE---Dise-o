@@ -1,0 +1,74 @@
+/*
+1. Crear una funcion que muestre "¡Hola, mundo!" en consola
+*/
+
+function mensajeHola(){
+    console.log('¡Hola, mundo!');
+}
+
+mensajeHola();
+
+/*
+2. Crear una función que reciba un nombre como parámetro y muestre 
+"¡Hola, [nombre]!" en la consola.
+*/
+
+function mensajeHolaConParametro(nombre){
+    console.log(`¡Hola, ${nombre}!`);
+}
+
+mensajeHolaConParametro('Lety');
+
+
+/*
+3. Crear una función que reciba un número como parámetro y devuelva el doble de ese número.
+*/
+
+function elDobleDeNumero(numero){
+    return parseInt(numero)*2;
+}
+
+let numeroDoble = elDobleDeNumero(20);
+console.log(typeof(numeroDoble));
+console.log(numeroDoble);
+
+/*
+4. Crear una función que reciba tres números como parámetros y devuelva su promedio.
+*/
+
+function promedio(valor1,valor2,valor3){
+    let suma = parseInt(valor1) + parseInt(valor2) + parseInt(valor3);
+    return suma/3;
+}
+
+let resultado = promedio(10,20,30);
+console.log(typeof(resultado));
+console.log(resultado);
+
+/*
+5. Crear una función que reciba dos números como parámetros y devuelva el mayor de ellos.
+*/
+
+function numeroMayor(valor1,valor2){
+    // if(valor1 > valor2){
+    //     return valor1;
+    // }else{
+    //     return valor2
+    // }
+    return valor1 > valor2 ? valor1 : valor2;
+}
+
+let numero = numeroMayor(10,5);
+console.log(numero);
+
+/*
+6. Crear una función que reciba un número como parámetro y 
+devuelva el resultado de multiplicar ese número por sí mismo. 
+*/
+
+function multItSelf(numero){
+    return parseInt(numero)*parseInt(numero);
+}
+
+let resultadoSelf = multItSelf(9);
+console.log(resultadoSelf);

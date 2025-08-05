@@ -1,0 +1,119 @@
+///*********************************** HTML ****************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    <main class="container">
+        <button onclick="mensaje();" class="button">Console</button>
+        <button onclick="mensajeAlert();" class="button">Alert</button>
+        <button onclick="nombreCiudad();" class="button">Prompt</button>
+        <button onclick="operacionSuma()" class="button">Suma</button>
+    </main>
+
+      <script src="app.js"></script>
+</body>
+</html>
+
+///*********************************** JS *****************************************
+
+/*
+2. Cambia el contenido de la etiqueta h1 con document.querySelector 
+y asigna el siguiente texto: "Hora del Desafío".
+*/
+
+let titulo = document.querySelector('h1');
+titulo.innerHTML = 'Hora del Desafío';
+
+
+/*
+3. Crea una función que muestre en la consola el mensaje 
+"El botón fue clicado" siempre que se presione el botón "Console".
+*/
+
+function mensaje(){
+    alert('El boton fue Clicado');
+    console.log('El boton fue Clicado');
+}
+
+/*
+4. Crea una función que se ejecute cuando se haga clic en el botón "prompt", 
+preguntando el nombre de una ciudad de Brasil. 
+Luego, muestra una alerta con el mensaje concatenando la respuesta 
+con el texto: "Estuve en {ciudad} y me acordé de ti".
+*/
+
+function nombreCiudad(){
+    let ciudad = prompt('¿Cual es el nombre de una Ciudad en Brasil?');
+    alert(`Estuve en ${ciudad} y me acorde de ti`);
+}
+
+
+/*
+5. Crea una función que muestre una alerta con el mensaje: 
+"Yo amo JS" siempre que se presione el botón "Alerta".
+*/
+
+function mensajeAlert(){
+    alert('Yo amo JS');
+}
+
+/*
+6. Al hacer clic en el botón "suma", pide 2 números y muestra el resultado de la suma en una alerta.
+*/
+
+function operacionSuma(){
+    let valor1 = parseInt(prompt('Ingresa un numero entero cualquiera'));
+    console.log(valor1);
+    let valor2 = parseInt(prompt('Ingresa otro numero entero cualquiera'));
+    console.log(valor2);
+
+    let resultado = valor1 + valor2;
+    alert(`El valor de la suma es ${resultado}`);
+}
+
+
+///*********************************** CSS *****************************************
+
+header {
+  text-align: center;
+  font-size: 30px;
+  color: #279EFF;
+}
+
+main, html {
+  margin: 0;
+  padding: 0;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0C356A;
+}
+
+.container {
+  text-align: center;
+  color: #279EFF;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 24px;
+  border: none;
+  background-color: #3498db;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
